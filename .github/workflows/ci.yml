@@ -39,8 +39,8 @@ jobs:
       - name: Tests (pytest)
         run: uv run pytest --tb=short
 
-      - name: Security: SAST (bandit)
+      - name: "Security: SAST (bandit)"
         run: uv run bandit -lll -r publicip
 
-      - name: Security: dependency audit (pip-audit)
+      - name: "Security: dependency audit (pip-audit)"
         run: uv run pip-audit
