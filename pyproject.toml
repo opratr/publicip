@@ -1,5 +1,5 @@
 [project]
-name = "publicip"
+name = "publicip-cli"
 version = "0.1.0"
 description = "A command-line utility to determine your internet-facing public IP address"
 readme = "README.md"
@@ -42,6 +42,9 @@ dev = [
     "ruff>=0.15.14",
     "pytest-cov>=7.1.0",
 ]
+
+[tool.hatch.build.targets.wheel]
+packages = ["publicip"]
 
 [build-system]
 requires = ["hatchling"]
