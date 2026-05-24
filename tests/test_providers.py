@@ -39,7 +39,7 @@ class TestICanHazIpProvider:
 
 class TestIdentMeProvider:
     def test_returns_stripped_ip(self, httpx_mock: HTTPXMock) -> None:
-        httpx_mock.add_response(url="https://api.ident.me", text="9.10.11.12\n")
+        httpx_mock.add_response(url="https://4.ident.me", text="9.10.11.12\n")
         assert IdentMeProvider().get_ip() == "9.10.11.12"
 
     def test_name(self) -> None:
@@ -48,7 +48,7 @@ class TestIdentMeProvider:
 
 class TestSeeIpProvider:
     def test_returns_stripped_ip(self, httpx_mock: HTTPXMock) -> None:
-        httpx_mock.add_response(url="https://ip4.seeip.org", text="13.14.15.16\n")
+        httpx_mock.add_response(url="https://ipv4.seeip.org", text="13.14.15.16\n")
         assert SeeIpProvider().get_ip() == "13.14.15.16"
 
     def test_name(self) -> None:

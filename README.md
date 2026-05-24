@@ -36,8 +36,8 @@ publicip --all                  # query all providers
 |-------------|--------------------|
 | `ipify`     | api.ipify.org      |
 | `icanhazip` | icanhazip.com      |
-| `identme`   | api.ident.me       |
-| `seeip`     | ip4.seeip.org      |
+| `identme`   | 4.ident.me         |
+| `seeip`     | ipv4.seeip.org     |
 
 The default order is `ipify → icanhazip → identme → seeip`. The first successful response wins.
 

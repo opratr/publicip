@@ -67,8 +67,8 @@ class TestAllFlag:
             url="https://api.ipify.org?format=json", json={"ip": "1.2.3.4"}
         )
         httpx_mock.add_response(url="https://icanhazip.com", text="1.2.3.4\n")
-        httpx_mock.add_response(url="https://api.ident.me", text="1.2.3.4\n")
-        httpx_mock.add_response(url="https://ip4.seeip.org", text="1.2.3.4\n")
+        httpx_mock.add_response(url="https://4.ident.me", text="1.2.3.4\n")
+        httpx_mock.add_response(url="https://ipv4.seeip.org", text="1.2.3.4\n")
         run("--all")
         out = capsys.readouterr().out
         assert "ipify" in out
@@ -81,8 +81,8 @@ class TestAllFlag:
             url="https://api.ipify.org?format=json", status_code=503
         )
         httpx_mock.add_response(url="https://icanhazip.com", text="1.2.3.4\n")
-        httpx_mock.add_response(url="https://api.ident.me", text="1.2.3.4\n")
-        httpx_mock.add_response(url="https://ip4.seeip.org", text="1.2.3.4\n")
+        httpx_mock.add_response(url="https://4.ident.me", text="1.2.3.4\n")
+        httpx_mock.add_response(url="https://ipv4.seeip.org", text="1.2.3.4\n")
         run("--all")
         err = capsys.readouterr().err
         assert "ERROR" in err
@@ -102,8 +102,8 @@ class TestFallback:
             url="https://api.ipify.org?format=json", status_code=503
         )
         httpx_mock.add_response(url="https://icanhazip.com", status_code=503)
-        httpx_mock.add_response(url="https://api.ident.me", status_code=503)
-        httpx_mock.add_response(url="https://ip4.seeip.org", status_code=503)
+        httpx_mock.add_response(url="https://4.ident.me", status_code=503)
+        httpx_mock.add_response(url="https://ipv4.seeip.org", status_code=503)
         with pytest.raises(SystemExit) as exc_info:
             run()
         assert exc_info.value.code == 1
