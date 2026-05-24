@@ -1,8 +1,8 @@
 # publicip
 
 [![CI](https://github.com/opratr/publicip/actions/workflows/ci.yml/badge.svg)](https://github.com/opratr/publicip/actions/workflows/ci.yml)
-[![PyPI version](https://img.shields.io/pypi/v/publicip)](https://pypi.org/project/publicip/)
-[![Python versions](https://img.shields.io/pypi/pyversions/publicip)](https://pypi.org/project/publicip/)
+[![PyPI version](https://img.shields.io/pypi/v/publicip-cli)](https://pypi.org/project/publicip-cli/)
+[![Python versions](https://img.shields.io/pypi/pyversions/publicip-cli)](https://pypi.org/project/publicip-cli/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 A command-line utility that reports your internet-facing public IP address. Queries multiple well-known free services with automatic fallback so you always get an answer even if a provider is down.
