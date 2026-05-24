@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-05-24
+
+### Changed
+- Renamed PyPI distribution to `publicip-cli` to avoid similarity conflict with existing `public-ip` package
+- CLI command, Python module, and all functionality remain unchanged
+
+### Fixed
+- Corrected provider URLs for ident.me (`4.ident.me`) and seeip (`ipv4.seeip.org`)
+
 ## [0.1.0] - 2026-05-24
 
 ### Added
