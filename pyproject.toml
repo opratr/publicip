@@ -22,6 +22,8 @@ classifiers = [
 dependencies = [
     "httpx>=0.28.1",
     "anyio>=4.14.2",
+    "pip>=26.2",
+    "urllib3>=2.8.0",
 ]
 
 [project.scripts]
